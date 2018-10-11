@@ -30,7 +30,12 @@ export class ProyectCreate extends Component {
     const {title,description}=this.state;
 
     return (
-      <div>
+      <div style={{
+        border:'1px solid green',
+        margin:20,
+        paddingBottom:10,
+        backgroundColor:'#eabcbc8c'
+      }}>
         <h2>Form to create a new proyect</h2>
         <form>
           <label>Title</label>

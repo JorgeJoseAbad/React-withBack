@@ -19,6 +19,7 @@ router.get('/projects', (req, res, next) => {
 
 // POST route => to create a new project
 router.post('/projects', (req, res, next)=>{
+  console.log(req.body);
   Project.create({
     title: req.body.title,
     description: req.body.description,
@@ -40,7 +41,7 @@ router.get('/projects/:id', (req, res, next)=>{
     return;
   }
 
-  // our projects have array of tasks' ids and 
+  // our projects have array of tasks' ids and
   // we can use .populate() method to get the whole task objects
   //                                   ^
   //                                   |

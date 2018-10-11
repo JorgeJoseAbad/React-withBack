@@ -10,8 +10,9 @@ export class SingleProjectLoader extends Component {
             loading: props.project ? false : true
         }
     }
-    
+
     componentWillMount(){
+      console.log(this.state.proyect);
         if(!this.state.project){
             this.getProject();
         }
@@ -38,4 +39,3 @@ export class SingleProjectLoader extends Component {
         }
     }
 }
-

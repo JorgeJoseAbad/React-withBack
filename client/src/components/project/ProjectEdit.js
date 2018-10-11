@@ -21,15 +21,15 @@ export class ProjectEdit extends React.Component {
 
     render(){
         let {title, description} = this.state;
-        // let title = this.state.title;
-        // let description = this.state.description;
+
         return (
             <div>
-                <label>Title</label>
-                <input type="text" value={title} onChange={e=> this.setState({title:e.currentTarget.value})}/>
-                <label>Description</label>
-                <input type="text" value={description} onChange={e=> this.setState({description:e.currentTarget.value})}/>
-                <button onClick={this.submitForm}>Edit this project</button>
+              <label>Title</label>
+              <input type="text" value={title} onChange={e=> this.setState({title:e.currentTarget.value})}/>
+              <label>Description</label>
+              <input type="text" value={description} onChange={e=> this.setState({description:e.currentTarget.value})}/>
+              <button onClick={this.submitForm}>Edit this project</button>
+
             </div>
         );
     }

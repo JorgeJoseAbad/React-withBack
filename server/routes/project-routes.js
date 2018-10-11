@@ -19,7 +19,7 @@ router.get('/projects', (req, res, next) => {
 
 // POST route => to create a new project
 router.post('/projects', (req, res, next)=>{
-  console.log(req.body);
+  
   Project.create({
     title: req.body.title,
     description: req.body.description,

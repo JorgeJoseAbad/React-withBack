@@ -11,14 +11,13 @@ export class ListProjectLoader extends Component {
             loading: true
         }
     }
-    
+
     componentWillMount(){
         this.refetchAll();
     }
 
     refetchAll(){
         let url = `http://localhost:3000/api/projects/`;
-        console.log(url);
         axios.get(url)
              .then(res => {
                  console.log(res.data);
@@ -27,19 +26,21 @@ export class ListProjectLoader extends Component {
              .catch(e =>  console.log("EROOR PIDIENDO PROYECTO"));
     }
 
+    //[...this.state.proyects, res.data]
+
     render(){
         let {projects, loading} = this.state;
         if(!loading){
             return (
                 <div>
-                    <button onClick={()=> this.refetchAll()}>Reload projects</button>
-                    {projects.map(project => (
-                        <SingleProjectLoader 
-                            key={project._id} 
-                            project={project}
-                            editable 
-                            />
-                    ))}
+                  <button onClick={()=> this.refetchAll()}>Reload projects</button>
+                  {projects.map(project => (
+                    <SingleProjectLoader
+                      key={project._id}
+                      project={project}
+                      editable
+                    />
+                  ))}
                 </div>
             )
         }else{
@@ -47,4 +48,3 @@ export class ListProjectLoader extends Component {
         }
     }
 }
-

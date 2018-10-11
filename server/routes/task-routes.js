@@ -7,10 +7,10 @@ const Project = require('../models/project-model');
 
 // POST route => to create a new task
 router.post('/tasks', (req, res, next)=>{
-  
+
   Task.create({
       title: req.body.title,
-      description: req.body.description,  
+      description: req.body.description,
       project: req.body.projectID
   })
     .then(response => {

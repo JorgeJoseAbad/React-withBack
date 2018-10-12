@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ListProjectLoader } from './components/project/ListProjectLoader';
-import { SingleProjectLoader} from './components/project/SingleProjectLoader.js';
 import { ProyectCreate} from './components/project/ProyectCreate.js'
 
 import {Chat} from './components/chat';

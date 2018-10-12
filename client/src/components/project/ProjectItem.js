@@ -29,6 +29,7 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
           <TaskCreate id={_id}/>
           <h3>Edit this proyect</h3>
           { editable && <ProjectEdit {...project} onProjectChanged={onProjectChanged}/> }
+          <h3>Delete this proyect</h3>
         </div>
     )
 }

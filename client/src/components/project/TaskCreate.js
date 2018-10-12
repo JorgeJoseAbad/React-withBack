@@ -8,7 +8,7 @@ export class TaskCreate extends Component{
     this.initialState={
       title:'',
       description:'',
-      projectID:this.props.id
+      projectID:this.props.proyectID
     }
     this.state=this.initialState;
   }
@@ -25,7 +25,9 @@ export class TaskCreate extends Component{
   submitForm = () => {
     axios.post(`http://localhost:3000/api/tasks/`, this.state)
         .then( (res) => {
-               console.log(res);
+               if(this.props.onProjectChanged){
+                   this.props.onProjectChanged();
+                 }
             })
         }
 

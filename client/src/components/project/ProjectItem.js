@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProjectEdit } from './ProjectEdit';
 import { TaskCreate } from './TaskCreate.js'
+import { TaskEdit } from './TaskEdit.js';
 
 export const ProjectItem = ({title, description, tasks, _id, editable=false, onProjectChanged}) => {
 
@@ -11,13 +12,19 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
           <h3>Project: {title}</h3>
           <p>Description: {description}</p>
           <div className="tasks">
-            <h5>List of tasks</h5>
+            <h3>List of tasks</h3>
             {tasks.length > 0 ?
               <ol>
                 {tasks.map((task,i) => <li key={task.title}>
                   <div style={{border:'1px solid blue', margin:20}}>
-                    <div>Task title: {task.title}</div>
-                    <div>Task description: {task.description}</div>
+                    <div><b>Task title: </b>{task.title}</div>
+                    <div><b>Task description: </b>{task.description}</div>
+                    <TaskEdit
+                      title={task.title}
+                      description={task.description}
+                      taskID={task._id}
+                      onProjectChanged={onProjectChanged}
+                    />
                   </div>
                 </li>)}
               </ol>
@@ -26,10 +33,10 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
             }
           </div>
           <h3>Add new task</h3>
-          <TaskCreate id={_id}/>
+          <TaskCreate proyectID={_id} onProjectChanged={onProjectChanged}/>
           <h3>Edit this proyect</h3>
           { editable && <ProjectEdit {...project} onProjectChanged={onProjectChanged}/> }
-          <h3>Delete this proyect</h3>
+          <button><h5>Delete this proyect</h5></button>
         </div>
     )
 }

@@ -29,6 +29,7 @@ router.post('/tasks', (req, res, next)=>{
 
 // PUT route => to update a specific task
 router.put('/tasks/:id', (req, res, next)=>{
+  console.log(req.body);
 
   if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
     res.status(400).json({ message: 'Specified id is not valid' });

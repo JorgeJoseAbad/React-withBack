@@ -28,7 +28,11 @@ export class ProjectEdit extends React.Component {
               <input type="text" value={title} onChange={e=> this.setState({title:e.currentTarget.value})}/>
               <label>Description</label>
               <input type="text" value={description} onChange={e=> this.setState({description:e.currentTarget.value})}/>
-              <button onClick={this.submitForm}>Edit and update this project</button>
+              <button
+                style={{backgroundColor:'Azure', margin:5}}
+                onClick={this.submitForm}>
+                Edit and update this project
+              </button>
 
             </div>
         );

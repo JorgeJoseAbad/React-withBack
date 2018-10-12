@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import { ProjectItem } from './ProjectItem';
 import { SingleProjectLoader } from './SingleProjectLoader';
 
 export class ListProjectLoader extends Component {

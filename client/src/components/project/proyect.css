@@ -1,0 +1,26 @@
+
+.proyect-class{
+  background-color: #d8d8ef;
+  box-shadow: 5px 5px 5px 0px #5c596f;
+}
+
+.task{
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  background-color: pink;
+  box-shadow: 5px 5px 5px 0px #523f42;
+}
+
+.task-edit{
+  background-color: #f5eaec;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 5px;
+  box-shadow: inset 3px 3px 5px #411f27;
+}
+
+ol{
+  list-style-type: none;
+}

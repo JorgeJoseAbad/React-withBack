@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import './proyect.css';
 
 export class TaskEdit extends Component{
   constructor(props){
@@ -24,7 +25,7 @@ export class TaskEdit extends Component{
   render(){
       let {title, description} = this.state;
     return (
-      <div>
+      <div className="task-edit">
         <b>Edit this task</b>
         <div>
           <label>Title</label>

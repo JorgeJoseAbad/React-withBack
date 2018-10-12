@@ -24,8 +24,9 @@ class App extends Component {
     return (
       <div className="App">
         <Chat/>
-        <ListProjectLoader />
         <ProyectCreate handleSubmit={this.handleSubmit}/>
+        <ListProjectLoader />
+
       </div>
     );
   }

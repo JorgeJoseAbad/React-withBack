@@ -2,21 +2,22 @@ import React from 'react';
 import { ProjectEdit } from './ProjectEdit';
 import { TaskCreate } from './TaskCreate.js'
 import { TaskEdit } from './TaskEdit.js';
+import './proyect.css';
 
 export const ProjectItem = ({title, description, tasks, _id, editable=false, onProjectChanged}) => {
 
     let project = {title, description, tasks, _id}
 
     return (
-        <div style={{border:'1px solid red', margin:20}}>
-          <h3>Project: {title}</h3>
-          <p>Description: {description}</p>
+        <div className="proyect-class" style={{border:'1px solid red', margin:20}}>
+          <h2>{title}</h2>
+          <b>Description:</b> <p>{description}</p>
           <div className="tasks">
             <h3>List of tasks</h3>
             {tasks.length > 0 ?
               <ol>
                 {tasks.map((task,i) => <li key={task.title}>
-                  <div style={{border:'1px solid blue', margin:20}}>
+                  <div className="task" style={{border:'1px solid blue', margin:20}}>
                     <div><b>Task title: </b>{task.title}</div>
                     <div><b>Task description: </b>{task.description}</div>
                     <TaskEdit

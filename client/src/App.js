@@ -5,6 +5,8 @@ import { ListProjectLoader } from './components/project/ListProjectLoader';
 import { SingleProjectLoader} from './components/project/SingleProjectLoader.js';
 import { ProyectCreate} from './components/project/ProyectCreate.js'
 
+import {Chat} from './components/chat';
+
 import axios from 'axios';
 
 
@@ -21,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Chat/>
         <ListProjectLoader />
         <ProyectCreate handleSubmit={this.handleSubmit}/>
       </div>

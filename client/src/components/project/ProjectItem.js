@@ -8,7 +8,7 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
 
     return (
         <div style={{border:'1px solid red', margin:20}}>
-          <h1>Project: {title}</h1>
+          <h3>Project: {title}</h3>
           <p>Description: {description}</p>
           <div className="tasks">
             <h5>List of tasks</h5>
@@ -27,8 +27,8 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
           </div>
           <h3>Add new task</h3>
           <TaskCreate id={_id}/>
-            <h3>Edit this proyect</h3>
-            { editable && <ProjectEdit {...project} onProjectChanged={onProjectChanged}/> }
+          <h3>Edit this proyect</h3>
+          { editable && <ProjectEdit {...project} onProjectChanged={onProjectChanged}/> }
         </div>
     )
 }

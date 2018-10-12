@@ -34,7 +34,7 @@ export class TaskCreate extends Component{
 
     return (
       <div>
-        <h2>Form to Add a new task</h2>
+
         <form>
           <label>Title</label>
           <input

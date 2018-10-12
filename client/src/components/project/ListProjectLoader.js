@@ -32,7 +32,12 @@ export class ListProjectLoader extends Component {
         let {projects, loading} = this.state;
         if(!loading){
             return (
-                <div>
+                <div style={{
+                  border:'2px solid green',
+                  padding:'5px',
+                  margin:'5px'
+                }}>
+                  <h2>Proyect Panel</h2>
                   <button onClick={()=> this.refetchAll()}>Reload projects</button>
                   {projects.map(project => (
                     <SingleProjectLoader

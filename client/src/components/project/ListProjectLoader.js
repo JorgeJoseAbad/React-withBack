@@ -19,7 +19,6 @@ export class ListProjectLoader extends Component {
         let url = `http://localhost:3000/api/projects/`;
         axios.get(url)
              .then(res => {
-                 console.log(res.data);
                  this.setState({projects: res.data, loading: false});
              })
              .catch(e =>  console.log("EROOR PIDIENDO PROYECTO"));
@@ -31,11 +30,13 @@ export class ListProjectLoader extends Component {
         let {projects, loading} = this.state;
         if(!loading){
             return (
-                <div style={{
-                  border:'2px solid green',
-                  padding:'5px',
-                  margin:'5px'
-                }}>
+                <div
+                  className="proyect-panel"
+                  style={{
+                    border:'2px solid green',
+                    padding:'5px',
+                    margin:'10px'
+                  }}>
                   <h2>Proyect Panel</h2>
                   <button onClick={()=> this.refetchAll()}>Reload projects</button>
                   {projects.map(project => (

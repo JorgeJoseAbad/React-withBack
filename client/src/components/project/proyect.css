@@ -1,6 +1,14 @@
+.proyect-panel{
+  background-color: #ecd7ec;
+  box-shadow: 6px 6px 6px 4px #6c5f73;
+}
 
 .proyect-class{
   background-color: #d8d8ef;
+  box-shadow: 5px 5px 5px 0px #5c596f;
+}
+
+.class-proyect-create{
   box-shadow: 5px 5px 5px 0px #5c596f;
 }
 

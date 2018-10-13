@@ -10,6 +10,7 @@ export class ProyectCreate extends Component {
             description: ''
         };
         this.state = this.initialState;
+        this.logo=this.props.logo;
     }
 
  handleChange = event =>{
@@ -30,13 +31,19 @@ export class ProyectCreate extends Component {
     const {title,description}=this.state;
 
     return (
-      <div style={{
-        border:'1px solid green',
-        margin:20,
-        paddingBottom:10,
-        backgroundColor:'#eabcbc8c'
-      }}>
-        <h2>Form to create a new proyect</h2>
+      <div
+        className="class-proyect-create"
+        style={{
+          border:'2px solid green',
+          margin:10,
+          paddingBottom:10,
+          backgroundColor:'#eabcbc8c'
+        }}>
+        <div style={{display: 'flex'}}>
+          <img src={this.props.logo} alt="logo" style={{flex:1, height:40, paddingTop:10}}/>
+          <h2 style={{flex:'1 1 80%'}}>Form to create a new proyect</h2>
+          <img src={this.props.logo} alt="logo" style={{flex:1, height:40, paddingTop:10}}/>
+        </div>
         <form>
           <label>Title</label>
           <input

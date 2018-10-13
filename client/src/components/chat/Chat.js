@@ -41,12 +41,20 @@ export class Chat extends React.Component{
     render(){
         let {messages, input} = this.state;
         return (
-            <div style={{border:'1px solid green', padding:'10px'}} onKeyDown={e => e.keyCode===13 ? this.submitChat():null}>
+            <div
+              style={{
+                border:'2px solid green',
+                padding:'10px',
+                margin:10,
+                backgroundColor: '#fbc3c3'
+              }}
+              onKeyDown={e => e.keyCode===13 ? this.submitChat():null}
+            >
               <h3>this is a chat demo</h3>
-                <div className="messages">
-                    {messages.map( (e,i) => <div className={"msg "+e.type} key={i}><div className="wrap">{e.msg}</div></div>)}
-                </div>
-                <input value={input} onChange={e => this.setState({input:e.currentTarget.value})}/>
+              <div className="messages">
+                {messages.map( (e,i) => <div className={"msg "+e.type} key={i}><div className="wrap">{e.msg}</div></div>)}
+              </div>
+              <input value={input} onChange={e => this.setState({input:e.currentTarget.value})}/>
             </div>
             )
     }

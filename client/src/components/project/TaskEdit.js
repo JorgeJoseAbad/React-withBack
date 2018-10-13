@@ -12,8 +12,7 @@ export class TaskEdit extends Component{
     }
   }
 
-  submitForm=e=>{
-    console.log(this.props);
+  submitForm=(e)=>{
     axios.put(`http://localhost:3000/api/tasks/${this.state.taskID}`,this.state)
     .then( () => {
         if(this.props.onProjectChanged){

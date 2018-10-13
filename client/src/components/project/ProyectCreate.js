@@ -22,7 +22,6 @@ export class ProyectCreate extends Component {
  }
 
  submitForm = () => {
-   console.log(this.state);
     this.props.handleSubmit(this.state)
     this.setState(this.initialState);
 }

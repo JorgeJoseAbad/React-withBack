@@ -12,7 +12,8 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
     return (
         <div className="proyect-class" style={{border:'1px solid red', margin:20}}>
           <h2>{title}</h2>
-          <b>Description:</b> <p>{description}</p>
+          <b>Description:</b>
+          <p>{description}</p>
           <div className="tasks">
             <h3>List of tasks</h3>
             {tasks.length > 0 ?

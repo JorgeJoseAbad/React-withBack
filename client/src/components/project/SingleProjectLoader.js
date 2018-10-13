@@ -12,7 +12,6 @@ export class SingleProjectLoader extends Component {
     }
 
     componentWillMount(){
-      console.log(this.state.proyect);
         if(!this.state.project){
             this.getProject();
         }
@@ -24,7 +23,6 @@ export class SingleProjectLoader extends Component {
         console.log(url);
         axios.get(url)
              .then(res => {
-                 console.log(res.data);
                  this.setState({project: res.data, loading: false});
              })
              .catch(e =>  console.log("EROOR PIDIENDO PROYECTO"));

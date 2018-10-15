@@ -24,6 +24,19 @@ export class ListProjectLoader extends Component {
              .catch(e =>  console.log("EROOR PIDIENDO PROYECTO"));
     }
 
+    deleteProject(id){
+
+      console.log("deleting his proyect",id);
+
+      axios.delete(`http://localhost:3000/api/projects/${id}`)
+      .then( () => {
+         console.log('Eliminado proyect');
+         this.refetchAll()
+      })
+      .catch(e =>  console.log("Error deleting proyect"))
+
+    }
+
     //[...this.state.proyects, res.data]
 
     render(){
@@ -43,6 +56,7 @@ export class ListProjectLoader extends Component {
                     <SingleProjectLoader
                       key={project._id}
                       project={project}
+                      onDeleteProject={(id)=>this.deleteProject(id)}
                       editable
                     />
                   ))}

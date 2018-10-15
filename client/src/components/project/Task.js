@@ -27,7 +27,9 @@ const  taskDelete = e=>{
         taskID={task._id}
         onProjectChanged={onProjectChanged}
       />
-      <button onClick={taskDelete} >Delete this task</button>
+      <div style={{margin:'auto',width:'20%'}}>
+        <button  style={{marginLeft:10}} onClick={taskDelete} >Delete this task</button>
+      </div>
     </div>
   )
 }

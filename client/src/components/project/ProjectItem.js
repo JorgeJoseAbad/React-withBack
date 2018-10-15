@@ -46,7 +46,12 @@ export const ProjectItem = ({title, description, tasks, _id, editable=false, onP
       <TaskCreate proyectID={_id} onProjectChanged={onProjectChanged}/>
       <h3>Edit this proyect</h3>
       { editable && <ProjectEdit {...project} onProjectChanged={onProjectChanged}/> }
-      <button onClick={proyectDelete}><h5>Delete this proyect</h5></button>
+      <button style={{
+        color:'white',
+        fontWeight:'bold',
+        backgroundColor:'#970303',
+        height:30
+      }} onClick={proyectDelete}>Delete this proyect</button>
     </div>
   )
 }
